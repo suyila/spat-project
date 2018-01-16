@@ -1,0 +1,130 @@
+#nav {
+    width:220px;
+    height:100%;
+    position:fixed;
+    float:left;
+    background-color:#1E1E25;
+    display: block;
+}
+
+html, body { height: 100%; padding: 0; margin: 0; }
+
+#div1, #div2, #div3, #div4{ width: 43%; height: 52%; float:right; position: relative;}
+#div1 {
+    background-color: #FFFFFF;
+
+}
+
+.div5{
+
+    width: 3px;
+    height: 50%;
+    background-color: black;
+    float: right;
+    margin: 10px;
+}
+
+.div5 {
+    margin-bottom: 0px!important;
+
+}
+
+#div2 {
+    background: #AAA;
+}
+
+#div3 {
+    background: #777;
+}
+#div4 {
+    background: #FFFFFF;
+}
+
+h3{
+    font-family: 'Overpass', sans-serif;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+p{
+    font-family: 'Overpass', sans-serif;
+    color: #46464F;
+    margin-left: 50px;
+
+}
+
+#green {
+    font-family: 'Overpass', sans-serif;
+    font-size: 14px;
+    background-color: #47D161;
+    width: 149px;
+    height: 45px;
+    border-radius:5px;
+    margin-left: 35%;
+    color: #FFFFFF;
+    margin-top:20px;
+    border:solid 1px #47D161;
+
+
+}
+
+#green:hover{
+    background-color:#41BC58;
+    border:solid 1px #41BC58;
+}
+
+#green:focus{
+    background-color:#38A04B;
+    border:solid 1px #38A04B;
+}
+
+#blue{
+    font-family: 'Overpass', sans-serif;
+    font-size: 14px;
+    background-color: #0081C5;
+    width: 149px;
+    height: 45px;
+    border-radius:5px;
+    margin-left: 35%;
+    color: #FFFFFF;
+    margin-top:20px;
+    border:solid 1px #0081C5;
+
+}
+
+#blue:hover{
+    background-color:#006AA2;
+    border:solid 1px #006AA2
+}
+
+#greenlogo {
+    float: right;
+}
+
+#blue:focus{
+    background-color:#00517B;
+    border:solid 1px #00517B;
+}
+
+#bluelogo {
+    float: right;
+}
+#div2 {
+
+
+    background-image: url("images/competa_home.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+
+}
+#div3 {
+    background-image: url("images/competamillman_home.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.body{
+    height: 100%;
+    width: auto;
+
+}

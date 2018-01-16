@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="nav.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<script>
+    $(document).ready(function(){
+    $('.button-left').click(function(){
+        $('.sidebar').toggleClass('fliph');
+    });
+
+});</script>
+
+<div class="main">
+    <aside>
+        <div class="sidebar left ">
+            <ul class="list-sidebar bg-defoult">
+                <form action="" id="filters"></form>
+                <li> <a href="#"> <img id="test3" src="images/icon_home.svg" width="17"> <span class="nav-label"> Home </span></a>
+                </li>
+                <li> <a href="#"><img id="test2" src="images/logo_all_collapsed.svg" height="25px" width="17"> <span class="nav-label">All</span></a> </li>
+                <li> <a href="#" data-toggle="collapse" data-target="#products" class="collapsed active" > <img id="test" src="images/logo_competa_collapsed.svg" height="25px" width="17"> <span class="nav-label">Competa</span> <span class="fa fa-chevron-left pull-right"></span> </a>
+                    <ul class="sub-menu collapse" id="products">
+                        <label><span class="RadioLabel"><input type="radio" name="position" form="filters" value="Staff"> Staff</span></label>
+                        <label><span class="RadioLabel"><input type="radio" name="position" form="filters" value="Trainee"> Trainees</span></label>
+                        <label><span class="RadioLabel"><input type="radio" name="position" form="filters" value="Intern"> Interns</span></label>
+                    </ul>
+                </li>
+                <li> <a href="#" data-toggle="collapse" data-target="#e-commerce" class="collapsed active" ><img id="test1" src="images/logo_competamillman_collapsed.svg" height="25px" width="17"> <span class="nav-label">Competa Millman</span><span class="fa fa-chevron-left pull-right"></span></a>
+                    <ul  class="sub-menu collapse" id="e-commerce" >
+                        <label><span class="RadioLabel"><input type="radio" name="position" form="filters" value="Staff"> Staff</span></label>
+                        <label><span class="RadioLabel"><input type="radio" name="position" form="filters" value="Trainee"> Trainees</span></label>
+                        <label><span class="RadioLabel"><input type="radio" name="position" form="filters" value="Intern"> Interns</span></label>
+                    </ul>
+                </li>
+                <li> <a href="#"><span class="nav-label"><input type="text" placeholder="Search.."></span></a> </li>
+                <li class="filters"> <span class="nav-label"><label><input type="checkbox" name="JobTitles" value="BACKOFFICE">BACK OFFICE</label></span></li>
+                <li class="filters"> <span class="nav-label"><label><input type="checkbox" name="JobTitles" value="PR">PR</label></span></li>
+                <li class="filters"> <span class="nav-label"><label><input type="checkbox" name="JobTitles" value="DESIGN">DESIGN</label></span></li>
+                <li class="filters"> <span class="nav-label"><label><input type="checkbox" name="JobTitles" value="FRONT-END">FRONT-END</label></span></li>
+                <li class="filters"> <span class="nav-label"><label><input type="checkbox" name="JobTitles" value="BACK-END">BACK-END</label></span></li>
+                <li class="filters"> <span class="nav-label"><label><input type="checkbox" name="JobTitles" value="FULL-STACK">FULL-STACK</label></span></li>
+                <li><header class="header">
+
+                    <a href="#" class="logout"><img src="images/icon_logout.svg" id="test5" width="25px"><span id="LogoutText">LOG OUT</span></a>
+                    <a href="#" class="button-left"><img id="collapse" src="images/icon_collapse.svg" ></a>
+                </header></li>
+            </ul>
+        </div>
+    </aside>
+</div>
+
+
+</body>
+    </html>
