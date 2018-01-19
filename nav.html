@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="styles/nav.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<script>
+    var toggle = 0;
+    $(document).ready(function(){
+        document.getElementById('products').style.height = "0px";
+    $('.button-left').click(function(){
+        $('.sidebar').toggleClass('fliph');
+        if(toggle == 0) {
+            document.getElementById("body").style.width = "calc(100% - 58px)";
+            toggle = 1;
+        }else{
+            document.getElementById("body").style.width = "calc(100% - 220px)";
+            toggle = 0;
+        }
+    });
+    $("#test").click(function(){
+            $('.sidebar').toggleClass('fliph');
+                document.getElementById("body").style.width = "calc(100% - 220px)";
+                toggle = 0;
+
+    });
+    $("#test1").click(function(){
+            $('.sidebar').toggleClass('fliph');
+            document.getElementById("body").style.width = "calc(100% - 220px)";
+            toggle = 0;
+
+        });
+    $("#products").on('show.bs.collapse', function(){
+       if($("#CompetaMillman").css('height') != '0px'){
+           $("#CompetaMillman").collapse("hide");
+       }
+        colourChange("#0081C5");
+       document.forms['filters'].elements['company'] = "Competa";
+    });
+    $("#CompetaMillman").on('show.bs.collapse', function(){
+        if($("#products").css('height') != '0px'){
+                $("#products").collapse("hide");
+        }
+        colourChange("#47D161");
+        document.forms['filters'].elements['company'] = "Competa-Millman";
+    });
+        $("#CompetaMillman").on('hide.bs.collapse', function(){
+            colourChange("#D7342B");
+        });
+        $("#products").on('hide.bs.collapse', function(){
+            colourChange("#D7342B");
+            /*document.getElementById("adminOpt").style.backgroundColor = "#D7342B";
+            document.getElementById("adminOptSmall").style.backgroundColor = "#D7342B";*/
+        });
+    function colourChange(colour){
+        document.getElementById("adminOpt").style.backgroundColor = colour;
+        document.getElementById("adminOptSmall").style.backgroundColor = colour;
+    }
+
+});</script>
+
+<div class="main">
+    <aside>
+        <div class="sidebar left ">
+            <ul class="list-sidebar bg-defoult">
+                <form action="" id="filters"></form>
+                <li> <a href="index.php"> <img id="test3" src="images/icon_home.svg" width="17"> <span class="nav-label"> HOME </span></a>
+                </li>
+                <span class="hidden">
+                    <input type="radio" name="company" form="filters" value="Competa">
+                    <input type="radio" name="company" form="filters" value="Competa-Millman">
+                </span>
+                <li> <a href="employees.php"><img id="test2" src="images/logo_all_collapsed.svg" height="25px" width="17"> <span class="nav-label">ALL</span></a> </li>
+                <li> <a href="#" data-toggle="collapse" data-target="#products" class="collapsed active" id="C"> <img id="test" src="images/logo_competa_collapsed.svg" height="25px" width="17"> <span class="nav-label">COMPETA</span>  </a>
+                    <ul class="sub-menu collapse" id="products">
+                        <label><span class="RadioLabel"><input type="radio" name="position" form="filters" value="Staff"> Staff</span></label>
+                        <label><span class="RadioLabel"><input type="radio" name="position" form="filters" value="Trainee"> Trainees</span></label>
+                        <label><span class="RadioLabel"><input type="radio" name="position" form="filters" value="Intern"> Interns</span></label>
+                    </ul>
+                </li>
+                <li> <a href="#" data-toggle="collapse" data-target="#CompetaMillman" class="collapsed active" id="CM"><img id="test1" src="images/logo_competamillman_collapsed.svg" height="25px" width="17"> <span class="nav-label">COMPETA MILLMAN</span></a>
+                    <ul  class="sub-menu collapse" id="CompetaMillman">
+                        <label><span class="RadioLabel"><input type="radio" name="position" form="filters" value="Staff"> Staff</span></label>
+                        <label><span class="RadioLabel"><input type="radio" name="position" form="filters" value="Trainee"> Trainees</span></label>
+                        <label><span class="RadioLabel"><input type="radio" name="position" form="filters" value="Intern"> Interns</span></label>
+                    </ul>
+                </li>
+                <li> <a href="#"><span class="nav-label"><input type="text" placeholder="Search.."></span></a> </li>
+                <li class="filters"> <span class="nav-label"><label><input type="checkbox" name="JobTitles" value="BACKOFFICE"> BACK OFFICE</label></span></li>
+                <li class="filters"> <span class="nav-label"><label><input type="checkbox" name="JobTitles" value="PR"> PR</label></span></li>
+                <li class="filters"> <span class="nav-label"><label><input type="checkbox" name="JobTitles" value="DESIGN"> DESIGN</label></span></li>
+                <li class="filters"> <span class="nav-label"><label><input type="checkbox" name="JobTitles" value="FRONT-END"> FRONT-END</label></span></li>
+                <li class="filters"> <span class="nav-label"><label><input type="checkbox" name="JobTitles" value="BACK-END"> BACK-END</label></span></li>
+                <li class="filters"> <span class="nav-label"><label><input type="checkbox" name="JobTitles" value="FULL-STACK"> FULL-STACK</label></span></li>
+                <li><header class="header">
+                    <div id="adminWrapper">
+                        <img id="adminOptSmall" src="images/icon_settings.svg">
+                        <button id="adminOpt" type="button" a href="../employees.php">Admin Options</button>
+                    </div>
+                    <a href="functions/LogoutScript.php" class="logout"><img src="images/icon_logout.svg" id="test5" width="25px"><span id="LogoutText">LOG OUT</span></a>
+                    <a href="#" class="button-left"><img id="collapse" src="images/icon_collapse.svg" ></a>
+                </header></li>
+            </ul>
+        </div>
+    </aside>
+</div>
+
+
+</body>
+    </html>
